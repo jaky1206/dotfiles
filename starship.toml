@@ -1,0 +1,76 @@
+# ~/.config/starship.toml
+
+# get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# battery
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 10
+style = 'bold red'
+
+[[battery.display]] # 'bold yellow' style and discharging_symbol when capacity is between 10% and 60%
+threshold =60
+style = 'bold yellow'
+
+[[battery.display]] # 'bold green' style and discharging_symbol when capacity is between 100% and 60%
+threshold = 100
+style = 'bold green'
+
+# custom error shape
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+# command duration
+[cmd_duration]
+min_time = 500
+format = 'underwent [$duration](bold yellow)'
+
+# environment variable
+[env_var.SHELL]
+variable = 'SHELL'
+default = 'unknown shell'
+style = 'bold green'
+
+#[env_var.USER]
+#default = 'unknown user'
+#style = 'bold green'
+
+# line break
+[line_break]
+disabled = false
+
+# local IP
+[localip]
+ssh_only = false
+format = '@[$localipv4](bold red) '
+disabled = false
+
+# memory usage
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ' '
+style = 'bold green'
+
+# time
+[time]
+disabled = false
+format = '🕙 [\[ $time \]]($style) '
+time_format = '%T'
+utc_time_offset = '+6'
+time_range = '10:00:00-14:00:00'
+
+# user name
+[username]
+style_user = 'green bold'
+style_root = 'red bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
