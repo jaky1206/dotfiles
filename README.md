@@ -1,2 +1,2 @@
-# LinuxConfigurations
-Commonly used configuration files
+# Configurations Files
+commonly used configuration files
