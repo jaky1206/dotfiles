@@ -9,7 +9,7 @@ export OSH='/home/rokib/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="powerline-plain"
+OSH_THEME="powerline"
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -74,7 +74,6 @@ OMB_USE_SUDO=true
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  composer
   ssh
 )
 
@@ -131,3 +130,21 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+
+__conda_setup="$('/home/rokib/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/rokib/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/rokib/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/rokib/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+# <<< conda initialize <<<
+
