@@ -5,11 +5,14 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='/home/rokib/.oh-my-bash'
+export OSH='/home/jaky1206/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="powerline"
+
+# If you set OSH_THEME to "random", you can ignore themes you don't like.
+# OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -40,6 +43,14 @@ COMPLETION_WAITING_DOTS="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you don't want the repository to be considered dirty
+# if there are untracked files.
+# SCM_GIT_DISABLE_UNTRACKED_DIRTY="true"
+
+# Uncomment the following line if you want to completely ignore the presence
+# of untracked files in the repository.
+# SCM_GIT_IGNORE_UNTRACKED="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.  One of the following values can
@@ -74,6 +85,7 @@ OMB_USE_SUDO=true
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
+  composer
   ssh
 )
 
@@ -91,12 +103,12 @@ aliases=(
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  battery
+  bashmarks
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
-# Example format: 
+# Example format:
 #  if [ "$DISPLAY" ] || [ "$SSH" ]; then
 #      plugins+=(tmux-autoattach)
 #  fi
@@ -130,21 +142,3 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-
-__conda_setup="$('/home/rokib/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/rokib/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/rokib/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/rokib/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-# <<< conda initialize <<<
-
