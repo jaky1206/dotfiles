@@ -85,9 +85,11 @@ OMB_USE_SUDO=true
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  composer
   ssh
   gh
+  composer
+  docker
+  docker-compose
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
